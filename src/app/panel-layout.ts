@@ -67,6 +67,7 @@ import {
   CotPositioningPanel,
   DiseaseOutbreaksPanel,
   SocialVelocityPanel,
+  CreditCardBalancePanel,
 } from '@/components';
 import { SatelliteFiresPanel } from '@/components/SatelliteFiresPanel';
 import { focusInvestmentOnMap } from '@/services/investments-focus';
@@ -984,6 +985,7 @@ export class PanelLayoutManager implements AppModule {
     this.createPanel('hormuz-tracker', () => new HormuzPanel());
     this.createPanel('etf-flows', () => new ETFFlowsPanel());
     this.createPanel('stablecoins', () => new StablecoinPanel());
+    this.createPanel('credit-cards', () => new CreditCardBalancePanel());
 
     if (this.ctx.isDesktopApp) {
       const runtimeConfigPanel = new RuntimeConfigPanel({ mode: 'alert' });
